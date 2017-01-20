@@ -8,124 +8,118 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.calc.MainActivity">
+    tools:context="com.example.lab2.MainActivity">
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/tvdisplay" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView"
+        android:text="Enter a name below:"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp">
+        android:id="@+id/tvuptop" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="108dp"
+        android:id="@+id/badd" />
 
-            <Button
-                android:text="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bone"
-                android:onClick="onClick1"/>
+    <Button
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bcancel"
+        android:layout_toEndOf="@+id/bcancel"
+        android:layout_marginStart="19dp"
+        android:id="@+id/bclear" />
 
-            <Button
-                android:text="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btwo"
-                android:onClick="onClick2"/>
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/bcancel"
+        android:layout_alignBaseline="@+id/badd"
+        android:layout_alignBottom="@+id/badd"
+        android:layout_alignEnd="@+id/editText"
+        android:onClick="onRadioButtonClicked"/>
 
-            <Button
-                android:text="3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bthree"
-                android:onClick="onClick3"/>
-        </TableRow>
+    <RadioButton
+        android:text="Male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bcancel"
+        android:layout_toStartOf="@+id/bcancel"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/rbmale"
+        android:onClick="onRadioButtonClicked"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    <RadioButton
+        android:text="Female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rbmale"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rbfemale"
+        android:onClick="onRadioButtonClicked"/>
 
-            <Button
-                android:text="4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bfour"
-                android:onClick="onClick4"/>
+    <RadioButton
+        android:text="Engineer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rbfemale"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/rbengineer" />
 
-            <Button
-                android:text="5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bfive"
-                android:onClick="onClick5"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_marginTop="19dp"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
 
-            <Button
-                android:text="6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bsix"
-                android:onClick="onClick6"/>
-        </TableRow>
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/badd"
+        android:layout_alignStart="@+id/rbmale"
+        android:layout_marginTop="24dp"
+        android:id="@+id/tvoutcome"
+        android:visibility="invisible"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvoutcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:id="@+id/tvint" />
 
-            <Button
-                android:text="7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bseven"
-                android:onClick="onClick7"/>
+    <Button
+        android:text="Decrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/binc"
+        android:layout_toEndOf="@+id/bcancel"
+        android:id="@+id/bdec" />
 
-            <Button
-                android:text="8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/beight"
-                android:onClick="onClick8"/>
+    <Button
+        android:text="Increment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/binc"
+        android:layout_below="@+id/tvint"
+        android:layout_alignParentStart="true" />
 
-            <Button
-                android:text="9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bnine"
-                android:onClick="onClick9"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:text="0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bzero"
-                android:onClick="onClick0"/>
-
-            <Button
-                android:text="+"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bplus"
-                android:onClick="onClickPlus"/>
-
-            <Button
-                android:text="="
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bequals"
-                android:onClick="onClickEquals"/>
-        </TableRow>
-    </TableLayout>
 
 </RelativeLayout>
